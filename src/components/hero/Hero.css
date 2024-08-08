@@ -1,0 +1,39 @@
+.movie-banner {
+    padding-top: 167px;
+}
+
+.movie-title {
+    margin-bottom: 26px;
+}
+
+.movie-name {
+    margin-bottom: 12px;
+}
+
+.movie-desc {
+    margin-bottom: 30px;
+    width: 507px;
+}
+
+.slick-dots {
+    display: flex !important;
+    justify-content: start !important;
+    bottom: 60px !important;
+    margin-left: 160px !important;
+}
+
+.slick-dots li {
+    display: flex !important;
+    align-items: flex-end !important;
+    width: 10px !important;
+}
+
+.slick-dots li button {
+    height: 30px !important;
+    width: 3px !important;
+}
+
+.slick-dots li.slick-active button {
+    height: 50px !important;
+    background: #EF4234 !important;
+}

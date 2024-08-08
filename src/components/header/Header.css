@@ -1,0 +1,38 @@
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 33px;
+    padding-left: 48px;
+    padding-right: 48px;
+     * {
+        color: #fff !important;
+     }
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    img {
+        margin-right: 60px;
+    }
+    a {
+        padding: 10px 0px;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom ease 0.4s;
+    }
+    a:hover {
+        border-bottom: 2px solid #EF4234;
+    }
+     
+}
+.actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    button {
+        border: none;
+        background: transparent;
+    }
+}
