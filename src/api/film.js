@@ -3,17 +3,20 @@
 
 
 import axios from "../axios";
-import { api_key } from "../constants"
 
 class FilmApi {
 
     // method
     async fethPopularMovie() {
-        const url = '/movie/popular' + api_key + '&language=ru'
-        const response = await axios(url)
-        return await response.data
+        const { data } = await axios('/movie/popular')
+        return await data
+    }
+    async fethMovieGenres() {
+        const { data } = await axios('genre/movie/list')
+        return await data
     }
 }
 
 
 export default new FilmApi();
+

@@ -5,6 +5,7 @@ import { useContext } from 'react'
 import { MOVIE_CONTEXT } from "./context/AppContext";
 import { img_url } from "./constants";
 import Search from "./components/section-search/Search";
+import Genres from "./components/section-genre/Genres";
 
 const App = () => {
   const { img } = useContext(MOVIE_CONTEXT)
@@ -22,6 +23,8 @@ const App = () => {
       </div>
 
       <Search />
+      <Genres />
+      
     </div>
   )
 }
