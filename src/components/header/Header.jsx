@@ -4,15 +4,17 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <header>
-            <div className="logo">
-                <img src={Logo} alt="" />
-                <a href="">Главная</a>   
-                <a href="">Фильмы</a>   
-            </div>
-            <div className="actions">
-                <button>EN</button>
-                <FaRegCircleUser  fill="#fff"/>
+        <header >
+            <div className="container">
+                <div className="logo">
+                    <img src={Logo} alt="" />
+                    <a href="">Главная</a>
+                    <a href="">Фильмы</a>
+                </div>
+                <div className="actions">
+                    <button>EN</button>
+                    <FaRegCircleUser fill="#fff" />
+                </div>
             </div>
         </header>
     )

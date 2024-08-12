@@ -9,6 +9,8 @@ import Button from '../UI/button/Button';
 import film from '../../api/film';
 import { MOVIE_CONTEXT } from '../../context/AppContext';
 
+import { Link } from "react-router-dom"
+
 const contentStyle = {
     margin: 0,
     width: 507,
@@ -34,10 +36,6 @@ const Hero = () => {
 
     }, [])
 
-    const showAlert = (kinoId) => {
-        alert(kinoId)
-    }
-
     if (data === null) {
         return <Flex style={{ marginTop: '100px', marginLeft: '100px' }}
             align='center' >
@@ -51,10 +49,10 @@ const Hero = () => {
                 afterChange={(index) => {
                     setBgImg(data[index].backdrop_path)
                 }}
-                arrows infinite={true} autoplay={false}>
+                arrows infinite={true} autoplay={true}>
                 {data.map((el) => {
                     return (
-                        <div >
+                        <div key={el.id}>
                             <div className='movie-banner container' style={contentStyle}>
                                 <p className='movie-title'>Выбор Illuminous</p>
                                 <h2 className='movie-name'>
@@ -63,12 +61,12 @@ const Hero = () => {
                                 <p className='movie-desc'>
                                     {el.overview}
                                 </p>
-                                <Button
-                                    onClick={() => {
-                                        showAlert(el.id)
-                                    }}
-                                    btnText={"Смотреть"}
-                                    icon={<FaPlayCircle />} />
+                                <Link to={`/film/${el.id}`}>
+                                    <Button
+                                        btnText={"Смотреть"}
+                                        icon={<FaPlayCircle />} />
+                                </Link>
+
                             </div>
                         </div>
                     )
