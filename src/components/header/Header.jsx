@@ -1,6 +1,7 @@
 import { FaRegCircleUser } from "react-icons/fa6";
 import Logo from '../../assets/LOGO.svg'
 import './Header.css'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
     return (
@@ -8,12 +9,14 @@ const Header = () => {
             <div className="container">
                 <div className="logo">
                     <img src={Logo} alt="" />
-                    <a href="">Главная</a>
-                    <a href="">Фильмы</a>
+                    <NavLink to="/">Главная</NavLink>
+                    <NavLink to="/film">Фильмы</NavLink>
                 </div>
                 <div className="actions">
                     <button>EN</button>
-                    <FaRegCircleUser fill="#fff" />
+                    <NavLink to="/auth">
+                        <FaRegCircleUser fill="#fff" />
+                    </NavLink>
                 </div>
             </div>
         </header>

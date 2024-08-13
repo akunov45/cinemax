@@ -66,7 +66,6 @@ const Hero = () => {
                                         btnText={"Смотреть"}
                                         icon={<FaPlayCircle />} />
                                 </Link>
-
                             </div>
                         </div>
                     )
